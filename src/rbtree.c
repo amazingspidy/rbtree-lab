@@ -15,7 +15,7 @@ rbtree *new_rbtree(void) { //rb트리 생성
 void delete_nodes(node_t *node, node_t *nil) {
   if (node == nil) {
     return;
-  }
+  } 
   delete_nodes(node->left, nil);
   delete_nodes(node->right, nil);
   free(node);
@@ -290,5 +290,5 @@ int rbtree_to_array(const rbtree *t, key_t *arr, const size_t n) {
 
   find_ascending(t->root);
   return 0;
-  
+
 }
